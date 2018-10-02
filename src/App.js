@@ -27,10 +27,6 @@ class App extends Component {
     })
   }
 
-  test = (data) => {
-    console.log(data);
-  }
-
   render() {
     return (
       <div className="App">
