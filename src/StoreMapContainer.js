@@ -1,7 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import StoreMap from './StoreMap';
 
 export default class StoreMapContainer extends React.Component {
+
+  state = {
+    location: this.props.location
+  }
+
   render() {
     return (
       <StoreMap
