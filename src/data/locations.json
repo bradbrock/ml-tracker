@@ -1,0 +1,116 @@
+[
+  {
+    "storeName" : "Walgreen's",
+    "locations" : [
+      {
+        "streetNumer" : 7930,
+        "streetName" : "Belt Line Rd",
+        "city" : "Dallas",
+        "state" : "TX",
+        "zip" : 75254,
+        "lat" : 32.9504467,
+        "lng" : -96.7700028
+      },
+      {
+        "streetNumer" : 500,
+        "streetName" : "Centennial Blvd",
+        "city" : "Richardson",
+        "state" : "TX",
+        "zip" : 75081,
+        "lat" : 32.9377651,
+        "lng" : -96.7248881
+      },
+      {
+        "streetNumer" : 5201,
+        "streetName" : "Belt Line Rd",
+        "city" : "Dallas",
+        "state" : "TX",
+        "zip" : 75254,
+        "lat" : 32.9547095,
+        "lng" : -96.8188298
+      },
+      {
+        "streetNumer" : 18410,
+        "streetName" : "Preston Rd",
+        "city" : "Dallas",
+        "state" : "TX",
+        "zip" : 75252,
+        "lat" : 33.0012856,
+        "lng" : -96.7956448
+      },
+      {
+        "streetNumer" : 18207,
+        "streetName" : "Midway Rd",
+        "city" : "Dallas",
+        "state" : "TX",
+        "zip" : 75287,
+        "lat" : 32.9977044,
+        "lng" : -96.8445253
+      }
+    ]
+  },
+  {
+    "storeName" : "Target",
+    "locations" : [
+      {
+        "streetNumer" : 601,
+        "streetName" : "S Plano Rd",
+        "city" : "Richardson",
+        "state" : "TX",
+        "zip" : 75081,
+        "lat" : 32.9399081,
+        "lng" : -96.6967249
+      },
+      {
+        "streetNumer" : 16731,
+        "streetName" : "Coit Rd",
+        "city" : "Dallas",
+        "state" : "TX",
+        "zip" : 75248,
+        "lat" : 32.9827841,
+        "lng" : -96.7701852
+      },
+      {
+        "streetNumer" : 120,
+        "streetName" : "W Parker Rd",
+        "city" : "Plano",
+        "state" : "TX",
+        "zip" : 75075,
+        "lat" : 33.0369278,
+        "lng" : -96.7078185
+      }
+    ]
+  },
+  {
+    "storeName" : "Gamestop",
+    "locations" : [
+      {
+        "streetNumer" : 1025,
+        "streetName" : "N Central Expy #220",
+        "city" : "Plano",
+        "state" : "TX",
+        "zip" : 75075,
+        "lat" : 33.0167785,
+        "lng" : -96.7096531
+      },
+      {
+        "streetNumer" : 2160,
+        "streetName" : "N Coit Rd #150",
+        "city" : "Richardson",
+        "state" : "TX",
+        "zip" : 75080,
+        "lat" : 32.9803812,
+        "lng" : -96.7675138
+      },
+      {
+        "streetNumer" : 2201,
+        "streetName" : "Preston Rd E",
+        "city" : "Plano",
+        "state" : "TX",
+        "zip" : 75093,
+        "lat" : 33.0304517,
+        "lng" : -96.7965674
+      }
+    ]
+  }
+]
