@@ -3,7 +3,7 @@
     "storeName" : "Walgreen's",
     "locations" : [
       {
-        "streetNumer" : 7930,
+        "streetNumber" : 7930,
         "streetName" : "Belt Line Rd",
         "city" : "Dallas",
         "state" : "TX",
@@ -12,7 +12,7 @@
         "lng" : -96.7700028
       },
       {
-        "streetNumer" : 500,
+        "streetNumber" : 500,
         "streetName" : "Centennial Blvd",
         "city" : "Richardson",
         "state" : "TX",
@@ -21,7 +21,7 @@
         "lng" : -96.7248881
       },
       {
-        "streetNumer" : 5201,
+        "streetNumber" : 5201,
         "streetName" : "Belt Line Rd",
         "city" : "Dallas",
         "state" : "TX",
@@ -30,7 +30,7 @@
         "lng" : -96.8188298
       },
       {
-        "streetNumer" : 18410,
+        "streetNumber" : 18410,
         "streetName" : "Preston Rd",
         "city" : "Dallas",
         "state" : "TX",
@@ -39,7 +39,7 @@
         "lng" : -96.7956448
       },
       {
-        "streetNumer" : 18207,
+        "streetNumber" : 18207,
         "streetName" : "Midway Rd",
         "city" : "Dallas",
         "state" : "TX",
@@ -53,7 +53,7 @@
     "storeName" : "Target",
     "locations" : [
       {
-        "streetNumer" : 601,
+        "streetNumber" : 601,
         "streetName" : "S Plano Rd",
         "city" : "Richardson",
         "state" : "TX",
@@ -62,7 +62,7 @@
         "lng" : -96.6967249
       },
       {
-        "streetNumer" : 16731,
+        "streetNumber" : 16731,
         "streetName" : "Coit Rd",
         "city" : "Dallas",
         "state" : "TX",
@@ -71,7 +71,7 @@
         "lng" : -96.7701852
       },
       {
-        "streetNumer" : 120,
+        "streetNumber" : 120,
         "streetName" : "W Parker Rd",
         "city" : "Plano",
         "state" : "TX",
@@ -85,7 +85,7 @@
     "storeName" : "Gamestop",
     "locations" : [
       {
-        "streetNumer" : 1025,
+        "streetNumber" : 1025,
         "streetName" : "N Central Expy #220",
         "city" : "Plano",
         "state" : "TX",
@@ -94,7 +94,7 @@
         "lng" : -96.7096531
       },
       {
-        "streetNumer" : 2160,
+        "streetNumber" : 2160,
         "streetName" : "N Coit Rd #150",
         "city" : "Richardson",
         "state" : "TX",
@@ -103,7 +103,7 @@
         "lng" : -96.7675138
       },
       {
-        "streetNumer" : 2201,
+        "streetNumber" : 2201,
         "streetName" : "Preston Rd E",
         "city" : "Plano",
         "state" : "TX",

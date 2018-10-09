@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import StoreMapContainer from './StoreMapContainer';
 
+
 class App extends Component {
 
   state = {
@@ -11,6 +12,7 @@ class App extends Component {
 
   componentDidMount() {
     this.getCoords();
+    // this.getMarkers(data);
   }
 
   getCoords = (props) => {
@@ -26,6 +28,10 @@ class App extends Component {
       lng: position.coords.longitude
     })
   }
+
+  // getMarkers = () => {
+  //   console.log(data);
+  // }
 
   render() {
     return (

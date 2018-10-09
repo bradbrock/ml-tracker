@@ -1,5 +1,6 @@
 import React from 'react';
 import StoreMap from './StoreMap';
+import data from './data/locations.json';
 
 export default class StoreMapContainer extends React.Component {
 
@@ -23,7 +24,8 @@ export default class StoreMapContainer extends React.Component {
         location = {this.state.location}
         loadingElement={ <div style={{ height: '100%' }} />}
         containerElement={<div style={{ height: `600px`, width: `600px` }} />}
-				mapElement={<div style={{ height: `100%` }} />}
+        mapElement={<div style={{ height: `100%` }} />}
+        markerData={{ data }}
       />
     )
   }
