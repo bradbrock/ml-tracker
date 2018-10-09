@@ -17,7 +17,9 @@ const StoreMap = withScriptjs(withGoogleMap((props) => {
         return (
           <Marker
             key={i}
+            storeID={marker.storeId}
             position={{ lat: marker.lat, lng: marker.lng }}
+            onClick={() => props.onMarkerSelected(marker.storeId)}
           />
         )
       })}

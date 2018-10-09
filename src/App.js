@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import StoreMapContainer from './StoreMapContainer';
+import Card from './Card';
 
 
 class App extends Component {
@@ -35,7 +36,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
+        <Card></Card>
         <StoreMapContainer location={{lat: this.state.lat, lng: this.state.lng}} />
       </div>
     );

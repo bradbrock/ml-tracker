@@ -9,16 +9,18 @@
         "state" : "TX",
         "zip" : 75254,
         "lat" : 32.9504467,
-        "lng" : -96.7700028
+        "lng" : -96.7700028,
+        "storeId" : "W1"
       },
       {
-        "streetNumber" : 500,
+        "streetNumber" : 5,
         "streetName" : "Centennial Blvd",
         "city" : "Richardson",
         "state" : "TX",
         "zip" : 75081,
         "lat" : 32.9377651,
-        "lng" : -96.7248881
+        "lng" : -96.7248881,
+        "storeId" : "W2"
       },
       {
         "streetNumber" : 5201,
@@ -27,7 +29,8 @@
         "state" : "TX",
         "zip" : 75254,
         "lat" : 32.9547095,
-        "lng" : -96.8188298
+        "lng" : -96.8188298,
+        "storeId" : "W3"
       },
       {
         "streetNumber" : 18410,
@@ -35,8 +38,9 @@
         "city" : "Dallas",
         "state" : "TX",
         "zip" : 75252,
-        "lat" : 33.0012856,
-        "lng" : -96.7956448
+        "lat" : 33.12856,
+        "lng" : -96.7956448,
+        "storeId" : "W4"
       },
       {
         "streetNumber" : 18207,
@@ -45,7 +49,8 @@
         "state" : "TX",
         "zip" : 75287,
         "lat" : 32.9977044,
-        "lng" : -96.8445253
+        "lng" : -96.8445253,
+        "storeId" : "W5"
       }
     ]
   },

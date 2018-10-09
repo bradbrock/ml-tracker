@@ -17,6 +17,11 @@ export default class StoreMapContainer extends React.Component {
     // console.log(prevProps);
   }
 
+  selectedStore(id) {
+    // const selectedStore = document.getElementById(id)
+    console.log(id);
+  }
+
   render() {
     return (
       <StoreMap
@@ -26,6 +31,7 @@ export default class StoreMapContainer extends React.Component {
         containerElement={<div style={{ height: `600px`, width: `600px` }} />}
         mapElement={<div style={{ height: `100%` }} />}
         markerData={{ data }}
+        onMarkerSelected={id => this.selectedStore(id)}
       />
     )
   }
