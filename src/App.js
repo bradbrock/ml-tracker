@@ -42,7 +42,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <CardList />
+        <CardList storeLocations={{ data }} />
         <StoreMapContainer location={{lat: this.state.lat, lng: this.state.lng}} storeLocations={{ data }} />
       </div>
     );
