@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
 import StoreMapContainer from './StoreMapContainer';
-import Card from './Card';
+import CardList from './CardList';
 
 
 class App extends Component {
-
-  state = {
-    lat: 42.3601,
-    lng: -71.0589
-  };
+  constructor(props) {
+    super(props);
+    // this.handleLoc = this.handleLoc.bind(this);
+    this.state = {
+      lat: 42.3601,
+      lng: -71.0589
+    };
+  }
+  
 
   componentDidMount() {
     this.getCoords();
@@ -37,7 +41,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Card></Card>
+        <CardList />
         <StoreMapContainer location={{lat: this.state.lat, lng: this.state.lng}} />
       </div>
     );

@@ -4,6 +4,13 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-map
 
 const StoreMap = withScriptjs(withGoogleMap((props) => {
 
+  // constructor(props) {
+  //   super(props);
+  //   this.handleChange = this.handleChange.bind(this);
+  // }
+  // handleChange(e) {
+  //   this.props.handleFoo(e.target.value);
+  // }
   return (
     <GoogleMap
       defaultZoom={14}
@@ -13,16 +20,14 @@ const StoreMap = withScriptjs(withGoogleMap((props) => {
         position={{ lat: 42.3601, lng: -71.0589 }}
         labelStyle={{backgroundColor: "yellow", fontSize: "32px", padding: "16px"}}
       />
-      { props.markerData.data[0].locations.map((marker, i) => {
-        return (
-          <Marker
-            key={i}
-            storeID={marker.storeId}
-            position={{ lat: marker.lat, lng: marker.lng }}
-            onClick={() => props.onMarkerSelected(marker.storeId)}
-          />
-        )
-      })}
+      { props.markerData.data[0].locations.map((marker, i) => 
+        <Marker
+          key={i}
+          storeID={marker.storeId}
+          position={{ lat: marker.lat, lng: marker.lng }}
+          onClick={() => props.onMarkerSelected(marker.storeId)}
+        />
+      )}
     </GoogleMap>
   )
 
