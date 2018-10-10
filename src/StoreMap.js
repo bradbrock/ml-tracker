@@ -6,7 +6,7 @@ const StoreMap = withScriptjs(withGoogleMap((props) => {
 
   return (
     <GoogleMap
-      defaultZoom={14}
+      defaultZoom={10}
       center = { props.location }
     >
       <Marker
