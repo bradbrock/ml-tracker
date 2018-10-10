@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import StoreMapContainer from './StoreMapContainer';
 import CardList from './CardList';
+import data from './data/locations.json';
 
 
 class App extends Component {
@@ -42,7 +43,7 @@ class App extends Component {
     return (
       <div className="app">
         <CardList />
-        <StoreMapContainer location={{lat: this.state.lat, lng: this.state.lng}} />
+        <StoreMapContainer location={{lat: this.state.lat, lng: this.state.lng}} storeLocations={{ data }} />
       </div>
     );
   }
