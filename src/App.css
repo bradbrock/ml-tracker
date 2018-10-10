@@ -7,5 +7,19 @@
 }
 
 .card {
-  outline: 1px red solid;
+  padding: 8px;
+  border: 1px gray solid;
+  border-radius: 2px;
+}
+.card:not(:last-child) {
+  margin-bottom: 10px;
+}
+.card p {
+  margin: 0;
+}
+.card p:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+.card__list {
+  padding: 8px;
 }
