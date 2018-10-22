@@ -31,10 +31,12 @@ class CardList extends React.Component {
             thisLocCity={loc.city}
             thisLocState={loc.state}
             thisLocZip={loc.zip}
+            thisLat={loc.lat}
+            thisLng={loc.lng}
             thisStoreId={loc.storeId}
             thisStoreStock={loc.inventory}
             isActive = { i === this.state.activeIndex ? true : false }
-            onActiveChange={this.handleActiveItem}
+            onSelect={this.handleActiveItem}
           />
         )}
       </div>

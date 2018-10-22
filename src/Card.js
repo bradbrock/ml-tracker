@@ -7,7 +7,7 @@ class Card extends Component {
   }
   handleClick(e) {
     e.preventDefault();
-    this.props.onActiveChange(this.props.index);
+    this.props.onSelect(this.props.index);
   }
   render() {
     return (
