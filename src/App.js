@@ -8,7 +8,6 @@ import data from './data/locations.json';
 class App extends Component {
   constructor(props) {
     super(props);
-    // this.handleLoc = this.handleLoc.bind(this);
     this.state = {
       lat: 42.3601,
       lng: -71.0589
@@ -17,7 +16,7 @@ class App extends Component {
   
 
   componentDidMount() {
-    this.getCoords();
+    // this.getCoords();
     // this.getMarkers(data);
   }
 
@@ -35,15 +34,12 @@ class App extends Component {
     })
   }
 
-  // getMarkers = () => {
-  //   console.log(data);
-  // }
-
   render() {
     return (
       <div className="app">
         <CardList storeLocations={{ data }} />
-        <StoreMapContainer location={{lat: this.state.lat, lng: this.state.lng}} storeLocations={{ data }} />
+        {/* <StoreMapContainer location={{lat: this.state.lat, lng: this.state.lng}} storeLocations={{ data }} /> */}
+        <StoreMapContainer location={{lat: 32.9977044, lng: -96.8445253}} storeLocations={{ data }} />
       </div>
     );
   }

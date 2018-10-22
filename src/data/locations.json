@@ -10,7 +10,25 @@
         "zip" : 75254,
         "lat" : 32.9504467,
         "lng" : -96.7700028,
-        "storeId" : "W1"
+        "storeId" : "W1",
+        "inventory" : [
+          {
+            "itemName" : "Thing",
+            "itemCount" : 4
+          },
+          {
+            "itemName" : "Human Torch",
+            "itemCount" : 2
+          },
+          {
+            "itemName" : "Medusa",
+            "itemCount" : 12
+          },
+          {
+            "itemName" : "Namor",
+            "itemCount" : 5
+          }
+        ]
       },
       {
         "streetNumber" : 5,
@@ -20,7 +38,21 @@
         "zip" : 75081,
         "lat" : 32.9377651,
         "lng" : -96.7248881,
-        "storeId" : "W2"
+        "storeId" : "W2",
+        "inventory" : [
+          {
+            "itemName" : "Mr Fantastic",
+            "itemCount" : 2
+          },
+          {
+            "itemName" : "Gwenpool",
+            "itemCount" : 3
+          },
+          {
+            "itemName" : "Wolverine",
+            "itemCount" : 1
+          }
+        ]
       },
       {
         "streetNumber" : 5201,
@@ -30,7 +62,25 @@
         "zip" : 75254,
         "lat" : 32.9547095,
         "lng" : -96.8188298,
-        "storeId" : "W3"
+        "storeId" : "W3",
+        "inventory" : [
+          {
+            "itemName" : "Black Bolt",
+            "itemCount" : 5
+          },
+          {
+            "itemName" : "Silver Surfer",
+            "itemCount" : 3
+          },
+          {
+            "itemName" : "Daredevil",
+            "itemCount" : 3
+          },
+          {
+            "itemName" : "Thanos",
+            "itemCount" : 1
+          }
+        ]
       },
       {
         "streetNumber" : 18410,
@@ -40,7 +90,21 @@
         "zip" : 75252,
         "lat" : 33.12856,
         "lng" : -96.7956448,
-        "storeId" : "W4"
+        "storeId" : "W4",
+        "inventory" : [
+          {
+            "itemName" : "Psylocke",
+            "itemCount" : 1
+          },
+          {
+            "itemName" : "Taskmaster",
+            "itemCount" : 2
+          },
+          {
+            "itemName" : "Cosmic Spider-Man",
+            "itemCount" : 2
+          }
+        ]
       },
       {
         "streetNumber" : 18207,
@@ -50,7 +114,29 @@
         "zip" : 75287,
         "lat" : 32.9977044,
         "lng" : -96.8445253,
-        "storeId" : "W5"
+        "storeId" : "W5",
+        "inventory" : [
+          {
+            "itemName" : "Spider-Man (Homemade Suit)",
+            "itemCount" : 1
+          },
+          {
+            "itemName" : "Thor (Ragnarok)",
+            "itemCount" : 1
+          },
+          {
+            "itemName" : "Ant Man",
+            "itemCount" : 1
+          },
+          {
+            "itemName" : "Black Widow",
+            "itemCount" : 2
+          },
+          {
+            "itemName" : "Serpent Society",
+            "itemCount" : 3
+          }
+        ]
       }
     ]
   },
