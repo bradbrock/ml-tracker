@@ -11,7 +11,7 @@ class StoreMapContainer extends React.Component {
     return (
       <StoreMap
         googleMapURL={'https://maps.googleapis.com/maps/api/js?key=AIzaSyCsTBbhmOk9BtjxzO5mBzpUWnMVV1LuNTQ&v=3.exp&libraries=geometry,drawing,places'}
-        location = {this.props.location}
+        mapCenter = {this.props.center}
         loadingElement={ <div style={{ height: '100%' }} />}
         containerElement={<div style={{ height: `600px`, width: `600px` }} />}
         mapElement={<div style={{ height: `100%` }} />}

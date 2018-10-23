@@ -22,6 +22,9 @@ class CardList extends React.Component {
             thisStoreStock={loc.inventory}
             isActive = { i === this.props.activeIndex ? true : false }
             onSelect={this.props.activeHandler}
+            newCoords={this.props.centerHandler}
+            // newLat={this.props.centerHandler}
+            // newLng={this.props.centerHandler}
           />
         )}
       </div>

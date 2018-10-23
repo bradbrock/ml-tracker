@@ -9,9 +9,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.handleActiveItem = this.handleActiveItem.bind(this);
+    this.recenterMap = this.recenterMap.bind(this);
     this.state = {
+
+      // Boston
       lat: 42.3601,
       lng: -71.0589,
+
+      // Dallas
+      // lat: 32.9383048,
+      // lng: -96.7449651,
+
       containsActiveItem: false,
       activeIndex: null
     };
@@ -21,6 +29,14 @@ class App extends Component {
     this.setState({
       containsActiveItem: true,
       activeIndex: index
+    });
+  }
+
+  recenterMap(lat, lng) {
+    // console.log(lat + " " + lng);
+    this.setState({
+      lat: lat,
+      lng: lng
     });
   }
   
@@ -50,8 +66,16 @@ class App extends Component {
           containsActiveItem={false}
           activeIndex={this.state.activeIndex}
           activeHandler={this.handleActiveItem}
+          centerHandler={this.recenterMap}
         />
-        <StoreMapContainer location={{lat: 32.9977044, lng: -96.8445253}} storeLocations={{ data }} />
+        <StoreMapContainer
+          center={
+            {
+              lat: this.state.lat,
+              lng: this.state.lng
+            }
+          }
+          storeLocations={{ data }} />
       </div>
     );
   }
