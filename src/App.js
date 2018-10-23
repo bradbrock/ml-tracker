@@ -74,7 +74,8 @@ class App extends Component {
               lng: this.state.lng
             }
           }
-          storeLocations={{ data }} />
+          storeLocations={{ data }}
+        />
       </div>
     );
   }
