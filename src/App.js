@@ -33,7 +33,6 @@ class App extends Component {
   }
 
   recenterMap(lat, lng) {
-    // console.log(lat + " " + lng);
     this.setState({
       lat: lat,
       lng: lng

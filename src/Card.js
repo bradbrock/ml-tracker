@@ -9,9 +9,6 @@ class Card extends Component {
     e.preventDefault();
     this.props.onSelect(this.props.index);
     this.props.newCoords(this.props.thisLat, this.props.thisLng);
-    // this.props.newLng(this.props.thisLng);
-    // console.log("lat " + this.props.thisLat);
-    // console.log("lng " + this.props.thisLng);
   }
   render() {
     return (
