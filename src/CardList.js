@@ -2,21 +2,6 @@ import React from 'react';
 import Card from './Card';
 
 class CardList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleActiveItem = this.handleActiveItem.bind(this);
-    this.state = {
-      containsActiveItem: false,
-      activeIndex: null
-    }
-  }
-
-  handleActiveItem(index) {
-    this.setState({
-      containsActiveItem: true,
-      activeIndex: index
-    });
-  }
 
   render() {
     
@@ -35,8 +20,8 @@ class CardList extends React.Component {
             thisLng={loc.lng}
             thisStoreId={loc.storeId}
             thisStoreStock={loc.inventory}
-            isActive = { i === this.state.activeIndex ? true : false }
-            onSelect={this.handleActiveItem}
+            isActive = { i === this.props.activeIndex ? true : false }
+            onSelect={this.props.activeHandler}
           />
         )}
       </div>
