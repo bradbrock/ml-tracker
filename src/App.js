@@ -4,7 +4,8 @@ import StoreMapContainer from './StoreMapContainer';
 import CardList from './CardList';
 import data from './data/locations.json';
 import EditInventory from './EditInventory';
-
+import EditCatalog from './EditCatalog';
+import firebase from './firebase.js';
 
 class App extends Component {
   constructor(props) {
@@ -13,6 +14,8 @@ class App extends Component {
     this.recenterMap = this.recenterMap.bind(this);
     this.updateInventory = this.updateInventory.bind(this);
     this.cancelUpdate = this.cancelUpdate.bind(this);
+    this.editCatalog = this.editCatalog.bind(this);
+    this.cancelEditCatalog = this.cancelEditCatalog.bind(this);
     this.state = {
 
       // Boston
@@ -25,7 +28,8 @@ class App extends Component {
 
       containsActiveItem: false,
       activeIndex: null,
-      editInProgress: false
+      inventoryEditActive: false,
+      catalogEditActive: false
     };
   }
 
@@ -43,13 +47,23 @@ class App extends Component {
   }
   updateInventory() {
     this.setState({
-      editInProgress: true
+      inventoryEditActive: true
     });
   }
   cancelUpdate() {
     this.setState({
-      editInProgress: false
+      inventoryEditActive: false
     });
+  }
+  editCatalog() {
+    this.setState({
+      catalogEditActive: true
+    })
+  }
+  cancelEditCatalog() {
+    this.setState({
+      catalogEditActive: false
+    })
   }
   
   // Get users GPS coords
@@ -74,25 +88,33 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <CardList
-          storeLocations={{ data }}
-          containsActiveItem={false}
-          activeIndex={this.state.activeIndex}
-          activeHandler={this.handleActiveItem}
-          centerHandler={this.recenterMap}
-          updateInventory={this.updateInventory}
-        />
-        <StoreMapContainer
-          center={
-            {
-              lat: this.state.lat,
-              lng: this.state.lng
+        <div className="app__row app__row--actions">
+          <button id="editCatalog" onClick={this.editCatalog}>Add to Catalog</button>
+        </div>
+        <div className="app__row">
+          <CardList
+            storeLocations={{ data }}
+            containsActiveItem={false}
+            activeIndex={this.state.activeIndex}
+            activeHandler={this.handleActiveItem}
+            centerHandler={this.recenterMap}
+            updateInventory={this.updateInventory}
+          />
+          <StoreMapContainer
+            center={
+              {
+                lat: this.state.lat,
+                lng: this.state.lng
+              }
             }
-          }
-          storeLocations={{ data }}
-        />
-        {this.state.editInProgress &&
+            storeLocations={{ data }}
+          />
+        </div>
+        {this.state.inventoryEditActive &&
           <EditInventory handleCancel={this.cancelUpdate} />
+        }
+        {this.state.catalogEditActive &&
+          <EditCatalog handleCancel={this.cancelEditCatalog} />
         }
       </div>
     );

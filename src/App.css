@@ -1,7 +1,13 @@
-.app {
+.app__row {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   max-width: 960px;
   margin: 0 auto;
+}
+.app__row--actions {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  padding: .5rem;
 }
