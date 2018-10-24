@@ -21,7 +21,7 @@ class EditInventory extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    const itemsRef = firebase.database().ref('catalog/Thor');
+    const itemsRef = firebase.database().ref('items');
     const item = {
       title: this.state.currentItem,
       user: this.state.username

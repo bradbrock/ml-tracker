@@ -8,7 +8,8 @@ class EditCatalog extends React.Component {
     this.state = {
       figureName : '',
       figureBaf : '',
-      figureBafPiece : ''
+      figureBafPiece : '',
+      items: []
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,11 +22,47 @@ class EditCatalog extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault();
+    const itemsRef = firebase.database().ref('catalog');
+    const item = {
+      figureName: this.state.figureName,
+      figureBaf: this.state.figureBaf,
+      figureBafPiece: this.state.figureBafPiece,
+    }
+    itemsRef.child(this.state.figureName).set({
+      baf: this.state.figureBaf,
+      bafPiece: this.state.figureBafPiece,
+      year: 2015
+    });
+    this.setState({
+      figureName: '',
+      figureBaf: '',
+      figureBafPiece: ''
+    });
   }
+
   handleCancel(e) {
     e.preventDefault();
     this.props.handleCancel();
   }
+
+  componentDidMount() {
+    const itemsRef = firebase.database().ref('catalog');
+    itemsRef.on('value', (snapshot) => {
+      let items = snapshot.val();
+      let newState = [];
+      for (let item in items) {
+        newState.push({
+          figureName: item,
+          figureBaf: items[item].title,
+          figureBafPiece: items[item].user
+        })
+      }
+      this.setState({
+        items: newState
+      });
+    });
+  }
+
   render() {
     return (
       <div className="edit-catalog">
