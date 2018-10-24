@@ -1,0 +1,36 @@
+.card {
+  display: block;
+  padding: 8px;
+  border: 1px gray solid;
+  border-radius: 2px;
+  text-decoration: none;
+  color: black;
+}
+.card.is-active {
+  outline: 2px red solid;
+  position: relative;
+}
+.card:not(:last-child) {
+  margin-bottom: 10px;
+}
+.card p {
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+.card__list {
+  padding: 8px;
+}
+.card__inventory {
+  margin-top: 20px;
+}
+.card__inventory > div{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  font-size: .8rem;
+}
+.card__edit {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+}

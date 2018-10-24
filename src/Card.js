@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Card.css';
 
 class Card extends Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class Card extends Component {
           )}
         </div>
         {this.props.isActive &&
-          <button>edit</button>
+          <button className="card__edit">edit</button>
         }
       </a>
     )
