@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import Input from './Input';
+import Input from './EditInventory';
 
 class CardList extends React.Component {
 

@@ -1,7 +1,8 @@
 import React from 'react';
 import firebase from './firebase.js';
+import './EditInventory.css';
 
-class Input extends React.Component {
+class EditInventory extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -55,7 +56,7 @@ class Input extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="editInventory">
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
@@ -89,4 +90,4 @@ class Input extends React.Component {
   }
 }
 
-export default Input;
+export default EditInventory;

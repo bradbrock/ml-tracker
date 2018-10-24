@@ -36,10 +36,3 @@
   justify-content: space-between;
   font-size: .8rem;
 }
-form {
-  display: flex;
-  flex-flow: column wrap;
-}
-form > * {
-  margin-bottom: 10px;
-}
