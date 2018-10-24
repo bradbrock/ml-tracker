@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from './Card';
-// import Input from './EditInventory';
 
 class CardList extends React.Component {
 
@@ -24,9 +23,9 @@ class CardList extends React.Component {
             isActive = { i === this.props.activeIndex ? true : false }
             onSelect={this.props.activeHandler}
             newCoords={this.props.centerHandler}
+            editCard={this.props.updateInventory}
           />
         )}
-        {/* <Input></Input> */}
       </div>
     )
   }

@@ -5,6 +5,7 @@ class Card extends Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.editCard = this.editCard.bind(this);
   }
   handleClick(e) {
     e.preventDefault();
@@ -13,6 +14,8 @@ class Card extends Component {
   }
   editCard(e) {
     e.preventDefault();
+    // console.log("editCard fired");
+    this.props.editCard();
   }
   render() {
     return (
@@ -33,7 +36,12 @@ class Card extends Component {
           )}
         </div>
         {this.props.isActive &&
-          <button className="card__edit">edit</button>
+          <button
+            className="card__edit"
+            onClick={this.editCard}
+          >
+            edit
+          </button>
         }
       </a>
     )

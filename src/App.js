@@ -3,6 +3,7 @@ import './App.css';
 import StoreMapContainer from './StoreMapContainer';
 import CardList from './CardList';
 import data from './data/locations.json';
+import EditInventory from './EditInventory';
 
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
     super(props);
     this.handleActiveItem = this.handleActiveItem.bind(this);
     this.recenterMap = this.recenterMap.bind(this);
+    this.updateInventory = this.updateInventory.bind(this);
     this.state = {
 
       // Boston
@@ -21,7 +23,8 @@ class App extends Component {
       // lng: -96.7449651,
 
       containsActiveItem: false,
-      activeIndex: null
+      activeIndex: null,
+      editInProgress: false
     };
   }
 
@@ -31,14 +34,19 @@ class App extends Component {
       activeIndex: index
     });
   }
-
   recenterMap(lat, lng) {
     this.setState({
       lat: lat,
       lng: lng
     });
   }
+  updateInventory() {
+    this.setState({
+      editInProgress: true
+    });
+  }
   
+  // Get users GPS coords
   // componentDidMount() {
   //   this.getCoords();
   // }
@@ -66,6 +74,7 @@ class App extends Component {
           activeIndex={this.state.activeIndex}
           activeHandler={this.handleActiveItem}
           centerHandler={this.recenterMap}
+          updateInventory={this.updateInventory}
         />
         <StoreMapContainer
           center={
@@ -76,6 +85,9 @@ class App extends Component {
           }
           storeLocations={{ data }}
         />
+        {this.state.editInProgress &&
+          <EditInventory></EditInventory>
+        }
       </div>
     );
   }
