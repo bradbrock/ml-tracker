@@ -10,6 +10,9 @@ class Card extends Component {
     this.props.onSelect(this.props.index);
     this.props.newCoords(this.props.thisLat, this.props.thisLng);
   }
+  editCard(e) {
+    e.preventDefault();
+  }
   render() {
     return (
       <a
@@ -28,6 +31,9 @@ class Card extends Component {
             </div>
           )}
         </div>
+        {this.props.isActive &&
+          <button>edit</button>
+        }
       </a>
     )
   }

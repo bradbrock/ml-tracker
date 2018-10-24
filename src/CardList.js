@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import Input from './EditInventory';
+// import Input from './EditInventory';
 
 class CardList extends React.Component {
 
@@ -26,7 +26,7 @@ class CardList extends React.Component {
             newCoords={this.props.centerHandler}
           />
         )}
-        <Input></Input>
+        {/* <Input></Input> */}
       </div>
     )
   }
