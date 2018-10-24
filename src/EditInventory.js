@@ -12,6 +12,7 @@ class EditInventory extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCancel = this.handleCancel.bind(this);
   }
   handleChange(e) {
     this.setState({
@@ -30,6 +31,10 @@ class EditInventory extends React.Component {
       currentItem: '',
       username: ''
     });
+  }
+  handleCancel(e) {
+    e.preventDefault();
+    this.props.handleCancel();
   }
   removeItem(itemId) {
     const itemRef = firebase.database().ref(`/items/${itemId}`);
@@ -56,7 +61,7 @@ class EditInventory extends React.Component {
 
   render() {
     return (
-      <div className="editInventory">
+      <div className="edit-inventory">
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
@@ -72,7 +77,10 @@ class EditInventory extends React.Component {
             onChange={this.handleChange}
             value={this.state.currentItem}
           />
-          <button>Add Item</button>
+          <div className="edit-inventory__actions">
+            <button>Add Item</button>
+            <button onClick={this.handleCancel}>Cancel</button>
+          </div>
         </form>
         <ul>
           {this.state.items.map((item) => {

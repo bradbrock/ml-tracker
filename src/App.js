@@ -12,6 +12,7 @@ class App extends Component {
     this.handleActiveItem = this.handleActiveItem.bind(this);
     this.recenterMap = this.recenterMap.bind(this);
     this.updateInventory = this.updateInventory.bind(this);
+    this.cancelUpdate = this.cancelUpdate.bind(this);
     this.state = {
 
       // Boston
@@ -43,6 +44,11 @@ class App extends Component {
   updateInventory() {
     this.setState({
       editInProgress: true
+    });
+  }
+  cancelUpdate() {
+    this.setState({
+      editInProgress: false
     });
   }
   
@@ -86,7 +92,7 @@ class App extends Component {
           storeLocations={{ data }}
         />
         {this.state.editInProgress &&
-          <EditInventory></EditInventory>
+          <EditInventory handleCancel={this.cancelUpdate} />
         }
       </div>
     );
