@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card';
+import CardSUI from './CardSUI';
 
 class CardList extends React.Component {
 
@@ -8,7 +8,7 @@ class CardList extends React.Component {
     return (
       <div className="card__list">
         { this.props.storeLocations.data[0].locations.map((loc, i) =>
-          <Card
+          <CardSUI
             key={i}
             index={i}
             thisLocStreetNum={loc.streetNumber}
@@ -24,7 +24,8 @@ class CardList extends React.Component {
             onSelect={this.props.activeHandler}
             newCoords={this.props.centerHandler}
             editCard={this.props.updateInventory}
-          />
+          >
+          </CardSUI>
         )}
       </div>
     )
