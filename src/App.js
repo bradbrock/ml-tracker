@@ -6,6 +6,7 @@ import data from './data/locations.json';
 import EditInventory from './EditInventory';
 import EditCatalog from './EditCatalog';
 import firebase from './firebase.js';
+import MyButton from './Button.js';
 
 class App extends Component {
   constructor(props) {
@@ -89,7 +90,7 @@ class App extends Component {
     return (
       <div className="app">
         <div className="app__row app__row--actions">
-          <button id="editCatalog" onClick={this.editCatalog}>Add to Catalog</button>
+          <MyButton text="Add to Catalog" />
         </div>
         <div className="app__row">
           <CardList
