@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './Header';
 import StoreMapContainer from './StoreMapContainer';
 import CardList from './CardList';
 import data from './data/locations.json';
@@ -89,9 +90,10 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <div className="app__row app__row--actions">
+        {/* <Header></Header> */}
+        {/* <div className="app__row app__row--actions">
           <MyButton text="Add to Catalog" />
-        </div>
+        </div> */}
         <div className="app__row">
           <CardList
             storeLocations={{ data }}

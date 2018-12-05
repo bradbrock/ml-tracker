@@ -21,7 +21,7 @@ class CardSUI extends React.Component {
   render() {
     return (
       <Card
-        className={`card ${(this.props.isActive) ? 'is-active' : ''}`}
+        className={`${(this.props.isActive) ? 'is-active' : ''}`}
         id={this.props.thisStoreId}
         onClick={this.handleClick}
       >
