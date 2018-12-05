@@ -21,8 +21,8 @@ class App extends Component {
     this.state = {
 
       // Boston
-      lat: 42.3601,
-      lng: -71.0589,
+      // lat: 42.3601,
+      // lng: -71.0589,
 
       // Dallas
       // lat: 32.9383048,
@@ -69,9 +69,9 @@ class App extends Component {
   }
   
   // Get users GPS coords
-  // componentDidMount() {
-  //   this.getCoords();
-  // }
+  componentDidMount() {
+    this.getCoords();
+  }
 
   getCoords = (props) => {
     navigator.geolocation.getCurrentPosition(
