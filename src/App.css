@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 html, body {
   background: #f7f7f7;
 }
@@ -6,6 +9,7 @@ html, body {
   flex-flow: row nowrap;
   justify-content: flex-start;
   margin: 0 auto;
+  height: 95vh;
 }
 .app__row--actions {
   display: flex;
@@ -16,4 +20,13 @@ html, body {
 
 .map-wrapper {
   width: 100%;
+}
+
+header {
+  height: 5vh;
+  /* padding: 20px; */
+  background: #fff;
+  box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 10;
 }

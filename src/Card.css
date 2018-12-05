@@ -8,9 +8,9 @@
   background: #fff;
   box-shadow: rgb(204, 204, 204) 0px 1px 2px;
 }
-.card.is-active {
+/* .card.is-active {
   position: relative;
-}
+} */
 .card:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -19,8 +19,7 @@
   margin-bottom: 4px;
 }
 .card__list {
-  padding: 8px;
-  height: 100vh;
+  padding: 20px;
   overflow-x: hidden;
 }
 .card__inventory {
@@ -42,6 +41,9 @@
 .ui.feed >.event > .content .extra,
 .ui.feed > .event > .label + .content {
   margin-top: 0;
+}
+.ui.card {
+  position: static;
 }
 a.ui.card:hover {
   transform: none;

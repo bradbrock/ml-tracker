@@ -1,12 +1,16 @@
 import React from 'react';
 import { Card, Feed, Icon } from 'semantic-ui-react';
 import './Card.css';
+import EditInventory from './EditInventory';
 
 class CardSUI extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.editCard = this.editCard.bind(this);
+    this.state = {
+      inventoryEditActive: false
+    }
   }
   handleClick(e) {
     e.preventDefault();
@@ -44,7 +48,10 @@ class CardSUI extends React.Component {
           </Feed>
         </Card.Content>
         <Card.Content extra>
-          <Feed.Date content='1 day ago' />
+          {/* <Feed.Date content='1 day ago' /> */}
+          {this.state.inventoryEditActive &&
+            <EditInventory handleCancel={this.cancelUpdate} />
+          }
         </Card.Content>
       </Card>
     )

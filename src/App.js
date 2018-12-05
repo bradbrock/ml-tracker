@@ -25,8 +25,8 @@ class App extends Component {
       // lng: -71.0589,
 
       // Dallas
-      // lat: 32.9383048,
-      // lng: -96.7449651,
+      lat: 32.9383048,
+      lng: -96.7449651,
 
       containsActiveItem: false,
       activeIndex: null,
@@ -70,7 +70,7 @@ class App extends Component {
   
   // Get users GPS coords
   componentDidMount() {
-    this.getCoords();
+    // this.getCoords();
   }
 
   getCoords = (props) => {
@@ -90,10 +90,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        {/* <Header></Header> */}
-        {/* <div className="app__row app__row--actions">
-          <MyButton text="Add to Catalog" />
-        </div> */}
+        <Header></Header>
         <div className="app__row">
           <CardList
             storeLocations={{ data }}
@@ -113,9 +110,9 @@ class App extends Component {
             storeLocations={{ data }}
           />
         </div>
-        {this.state.inventoryEditActive &&
+        {/* {this.state.inventoryEditActive &&
           <EditInventory handleCancel={this.cancelUpdate} />
-        }
+        } */}
         {this.state.catalogEditActive &&
           <EditCatalog handleCancel={this.cancelEditCatalog} />
         }
