@@ -48,3 +48,6 @@
 a.ui.card:hover {
   transform: none;
 }
+.ui.input > input {
+  max-width: 55px;
+}
