@@ -4,10 +4,10 @@ import Header from './Header';
 import StoreMapContainer from './StoreMapContainer';
 import CardList from './CardList';
 import data from './data/locations.json';
-import EditInventory from './EditInventory';
+// import EditInventory from './EditInventory';
 import EditCatalog from './EditCatalog';
-import firebase from './firebase.js';
-import MyButton from './Button.js';
+// import firebase from './firebase.js';
+// import FluidButton from './FluidButton.js';
 
 class App extends Component {
   constructor(props) {
@@ -33,6 +33,10 @@ class App extends Component {
       inventoryEditActive: false,
       catalogEditActive: false
     };
+  }
+
+  fooTest() {
+    console.log("foo test");
   }
 
   handleActiveItem(index) {
