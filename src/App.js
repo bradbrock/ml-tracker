@@ -4,7 +4,7 @@ import Header from './Header';
 import StoreMapContainer from './StoreMapContainer';
 import CardList from './CardList';
 import data from './data/locations.json';
-// import EditInventory from './EditInventory';
+import EditInventory from './EditInventory';
 import EditCatalog from './EditCatalog';
 // import firebase from './firebase.js';
 // import FluidButton from './FluidButton.js';
@@ -114,9 +114,9 @@ class App extends Component {
             storeLocations={{ data }}
           />
         </div>
-        {/* {this.state.inventoryEditActive &&
+        {this.state.inventoryEditActive &&
           <EditInventory handleCancel={this.cancelUpdate} />
-        } */}
+        }
         {this.state.catalogEditActive &&
           <EditCatalog handleCancel={this.cancelEditCatalog} />
         }

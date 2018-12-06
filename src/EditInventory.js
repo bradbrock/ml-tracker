@@ -1,6 +1,7 @@
 import React from 'react';
 import firebase from './firebase.js';
 import './EditInventory.css';
+import { Form, Checkbox, Button } from 'semantic-ui-react';
 
 class EditInventory extends React.Component {
   constructor() {
@@ -62,7 +63,7 @@ class EditInventory extends React.Component {
   render() {
     return (
       <div className="edit-inventory">
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} style={{display: 'none'}}>
           <input
             type="text"
             name="username"
@@ -82,6 +83,21 @@ class EditInventory extends React.Component {
             <button onClick={this.handleCancel}>Cancel</button>
           </div>
         </form>
+        <Form>
+          <Form.Field>
+            <label>Name</label>
+            <input placeholder="Name" />
+          </Form.Field>
+          <Form.Field>
+            <label>Item</label>
+            <input placeholder="Item" />
+          </Form.Field>
+          <Form.Field>
+            <Checkbox label="I'm a label" />
+          </Form.Field>
+          <Button primary type='submit' style={{marginBottom : 10}}>Submit</Button>
+          <Button compact size='mini'>Cancel</Button>
+        </Form>
         <ul>
           {this.state.items.map((item) => {
             return (
