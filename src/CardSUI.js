@@ -19,9 +19,13 @@ class CardSUI extends React.Component {
     this.props.onSelect(this.props.index);
     this.props.newCoords(this.props.thisLat, this.props.thisLng);
   }
-  handleChange(e) {
+  handleChange(e, index, item) {
     e.preventDefault();
-    console.log("changed");
+    console.log(index);
+    // this.props.thisStoreStock.map((item, index) =>{
+    //   console.log(item)
+    // })
+    // console.log( this.props.thisStoreStock[item] );
   }
   editInventory(e) {
     e.preventDefault();

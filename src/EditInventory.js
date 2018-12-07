@@ -2,7 +2,6 @@ import React from 'react';
 import firebase from './firebase.js';
 import './EditInventory.css';
 // import { Form, Checkbox, Button } from 'semantic-ui-react';
-import { Form, Checkbox, Button } from 'semantic-ui-react';
 
 class EditInventory extends React.Component {
   constructor() {
@@ -64,7 +63,7 @@ class EditInventory extends React.Component {
   render() {
     return (
       <div className="edit-inventory">
-        <form onSubmit={this.handleSubmit} style={{display: 'none'}}>
+        <form onSubmit={this.handleSubmit}>
           <input
             type="text"
             name="username"

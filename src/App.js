@@ -6,7 +6,7 @@ import CardList from './CardList';
 import data from './data/locations.json';
 import EditInventory from './EditInventory';
 import EditCatalog from './EditCatalog';
-// import firebase from './firebase.js';
+import firebase from './firebase.js';
 // import FluidButton from './FluidButton.js';
 
 class App extends Component {
@@ -18,6 +18,7 @@ class App extends Component {
     this.cancelUpdate = this.cancelUpdate.bind(this);
     this.editCatalog = this.editCatalog.bind(this);
     this.cancelEditCatalog = this.cancelEditCatalog.bind(this);
+    this.loadLocationData = this.loadLocationData.bind(this);
     this.state = {
 
       // Boston
@@ -33,10 +34,6 @@ class App extends Component {
       inventoryEditActive: false,
       catalogEditActive: false
     };
-  }
-
-  fooTest() {
-    console.log("foo test");
   }
 
   handleActiveItem(index) {
@@ -71,10 +68,17 @@ class App extends Component {
       catalogEditActive: false
     })
   }
-  
-  // Get users GPS coords
+  loadLocationData() {
+    const locationRef = firebase.database().ref('stores/Walgreen\'s');
+    locationRef.on('value', (snapshot) => {
+      let locationSnapshot = snapshot.val();
+      console.log(locationSnapshot);
+    });
+  }
   componentDidMount() {
+    // Get users GPS coords
     // this.getCoords();
+    this.loadLocationData();
   }
 
   getCoords = (props) => {
@@ -94,10 +98,11 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Header></Header>
+        {/* <Header></Header> */}
         <div className="app__row">
           <CardList
-            storeLocations={{ data }}
+            storeLocations={{data}}
+            // storeLocations={this.loadLocationData}
             containsActiveItem={false}
             activeIndex={this.state.activeIndex}
             activeHandler={this.handleActiveItem}
